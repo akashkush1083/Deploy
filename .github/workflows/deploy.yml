@@ -33,3 +33,5 @@ steps:
       key: ${{ secrets.EC2_KEY }}
       script: |
         kubectl set image deployment/project-deployment project=${{ secrets.DOCKER_USERNAME }}/project
+
+#hello
