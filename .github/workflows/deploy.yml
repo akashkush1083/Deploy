@@ -3,13 +3,12 @@ name: CI/CD to Kubernetes
 on:
 push:
 branches:
-- main
+  - main
 
 jobs:
 deploy:
 runs-on: ubuntu-latest
 
-```
 steps:
   - name: Checkout Code
     uses: actions/checkout@v3
@@ -31,4 +30,3 @@ steps:
       key: ${{ secrets.EC2_KEY }}
       script: |
         kubectl set image deployment/project-deployment project=${{ secrets.DOCKER_USERNAME }}/project
-```
