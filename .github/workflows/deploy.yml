@@ -31,4 +31,6 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ubuntu
           key: ${{ secrets.EC2_KEY }}
-          script: kubectl set image deployment/project-deployment project=${{ secrets.DOCKER_USERNAME }}/project:latest
+          script: sudo kubectl set image deployment/project-deployment project=${{ secrets.DOCKER_USERNAME }}/project:latest
+                  sudo kubectl rollout restart deployment/project-deployment
+                  sudo kubectl rollout status deployment/project-deployment
