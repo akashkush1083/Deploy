@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # ✅ Fixes Node.js warning and creditial update
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # ✅ Fixes Node.js warning and creditial update2
 
 jobs:
   deploy:
