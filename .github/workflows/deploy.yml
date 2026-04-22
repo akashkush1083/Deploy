@@ -31,7 +31,4 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ubuntu
           key: ${{ secrets.EC2_KEY }}
-          script: export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
-                  kubectl set image deployment/project-deployment project=${{ secrets.DOCKER_USERNAME }}/project:latest
-                  kubectl rollout restart deployment/project-deployment
-                  kubectl rollout status deployment/project-deployment
+          script: "KUBECONFIG=/etc/rancher/k3s/k3s.yaml kubectl set image deployment/project-deployment project=${{ secrets.DOCKER_USERNAME }}/project:latest"
