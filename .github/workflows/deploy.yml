@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:                          # ✅ Same level as runs-on
+    steps:                          # ✅ Same level as runs-on2
 
       - name: Checkout Code
         uses: actions/checkout@v3
